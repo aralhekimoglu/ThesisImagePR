@@ -1,0 +1,7 @@
+data/*
+experiments/*
+demo/*
+.env/*
+generated_images/
+
+__pycache__/

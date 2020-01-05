@@ -1,0 +1,142 @@
+Sun Sep 22 17:05:59 2019       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 418.39       Driver Version: 418.39       CUDA Version: 10.1     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|===============================+======================+======================|
+|   0  Tesla P40           On   | 00000000:04:00.0 Off |                    0 |
+| N/A   18C    P8     9W / 250W |      0MiB / 22919MiB |      0%   E. Process |
++-------------------------------+----------------------+----------------------+
+|   1  Tesla P40           On   | 00000000:05:00.0 Off |                    0 |
+| N/A   15C    P8     9W / 250W |      0MiB / 22919MiB |      0%   E. Process |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                       GPU Memory |
+|  GPU       PID   Type   Process name                             Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+Starting
+arch: resnet50 
+
+ckpt_dir: /scratch/ahh335/experiments/thesis/stage2/st2_noise18/ckpt 
+
+classifier_type: class 
+
+data_dir: /scratch/ahh335/data/reid 
+
+data_portion: 1.0 
+
+dataset: market1501 
+
+debug: False 
+
+di_lr: 1e-05 
+
+dp_lr: 0.001 
+
+drop: 0.0 
+
+e_lr: 1e-05 
+
+embed_dim: 1536 
+
+epochs: 100 
+
+eval_step: 1 
+
+exp_dir: /scratch/ahh335/experiments/thesis/stage2/st2_noise18 
+
+g_lr: 0.0001 
+
+gen_batch_size: 4 
+
+gen_img_dir: ./generated_images/st2_noise18 
+
+gen_net: unet 
+
+height: 384 
+
+lambda_gan_di: 1.0 
+
+lambda_gan_dp: 1.0 
+
+lambda_recon: 100.0 
+
+lambda_sp: 10.0 
+
+lambda_veri: 0.0 
+
+log_dir: /scratch/ahh335/experiments/thesis/stage2/st2_noise18/train.log 
+
+lr_step: 40 
+
+momentum: 0.9 
+
+netDi_pretrain: /scratch/ahh335/experiments/thesis/stage1/r50_pcb/ckpt/66_net_V.pth 
+
+netDp_pretrain:  
+
+netE_pretrain: /scratch/ahh335/experiments/thesis/stage1/r50_pcb_class/ckpt/90_net_E.pth 
+
+netG_pretrain:  
+
+netV_pretrain: /scratch/ahh335/experiments/thesis/stage1/r50_pcb_class/ckpt/90_net_V.pth 
+
+no_downsampling: True 
+
+noise_dim: 18 
+
+np_ratio: 3 
+
+num_class: 751 
+
+num_parts: 6 
+
+part_dims: 256 
+
+pcb_lr: 1e-05 
+
+pose_aug: gauss 
+
+pose_dim: 18 
+
+pretrained: False 
+
+save_step: 1 
+
+show_gpu: False 
+
+smooth_label: True 
+
+stage: 2 
+
+summary_dir: /scratch/ahh335/experiments/thesis/stage2/st2_noise18/summaries 
+
+test_baseline: False 
+
+test_batch_size: 12 
+
+train_batch_size: 4 
+
+use_pose_conv: False 
+
+v_lr: 1e-05 
+
+weight_decay: 0.0005 
+
+width: 128 
+
+workers: 8 
+
+Starting
+Detected 2 GPUs
+Dataset dataset loaded
+  subset   | # ids | # images
+  ---------------------------
+  train    |   751 |    12936
+  query    |   750 |    16483
+  gallery  |   751 |    19281
+slurmstepd: error: *** JOB 4607932 ON gpu-39 CANCELLED AT 2019-09-22T20:00:06 ***

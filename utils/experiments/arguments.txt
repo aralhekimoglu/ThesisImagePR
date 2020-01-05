@@ -1,0 +1,36 @@
+----------- Arguments ------------
+arch: resnet50 
+ckpt_dir: /scratch/ahh335/fdgan_model_folder/utils/./experiments/ckpt 
+classifier_type: siam 
+data_dir: /scratch/ahh335/fdgan_model_folder/utils/./data 
+data_portion: 1.0 
+dataset: market1501 
+debug: True 
+e_lr: 0.0005 
+embed_dim: 2048 
+epochs: 50 
+eval_step: 10 
+exp_dir: /scratch/ahh335/fdgan_model_folder/utils/./experiments 
+height: 256 
+log_dir: /scratch/ahh335/fdgan_model_folder/utils/./experiments/train.log 
+lr_step: 20 
+momentum: 0.1 
+netE_pretrain:  
+netV_pretrain:  
+niter: 50 
+niter_decay: 50 
+no_downsampling: False 
+np_ratio: 3 
+num_class: 751 
+num_parts: 0 
+part_dims: 256 
+pcb_lr: 0.1 
+save_step: 5 
+summary_dir: /scratch/ahh335/fdgan_model_folder/utils/./experiments/summaries 
+test_batch_size: 256 
+train_batch_size: 16 
+v_lr: 0.0005 
+weight_decay: 0.1 
+width: 128 
+workers: 4 
+-------------- End ---------------
